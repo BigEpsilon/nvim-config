@@ -1,12 +1,9 @@
 return {
     "Mofiqul/dracula.nvim",
-
-
-    -- Configure LazyVim to load gruvbox
-    {
-        "LazyVim/LazyVim",
-        opts = {
-            colorscheme = "dracula",
-        },
-    }
+    lazy = false,
+    priority = 1000,
+    config = function()
+        require("dracula").setup({})
+        vim.cmd.colorscheme("dracula")
+    end
 }
